@@ -5,6 +5,10 @@ html, body {
     font-family: sans-serif;
     font-weight: lighter;
 }
+h3 { font-weight: 500;font-size: 30px;}
+h4 {font-weight: 300;font-size: 15px;}
+hr {width:30px; height: 3px; Background:black; border:0; margin:0 auto 40px auto; }
+p {width:700px; margin: 0 auto 0 auto;}
 
 /* Image container --------------------------------------- */
 .img-container {
@@ -16,6 +20,7 @@ html, body {
     height:100vh;
     display:flex;
     box-sizing: border-box;
+    
 }
 .container .box {
     width: 20vw;
@@ -32,7 +37,7 @@ h2 {
     padding: 10px;
     line-height: 100vh;
     font-size: 2em;
-    background: rgba(0,0,0,.8);
+    background: rgb(0, 0, 0);
     transition: .5s;
     letter-spacing: 2px;
     text-align: left;
@@ -63,9 +68,10 @@ h2 span {
 {
     _background-color: rgb(128, 128, 128); 
 
-    background: url('images/Bildschirmfoto\ 2020-02-06\ um\ 11.16.45.png');
+    background: url('images/Logo.png');
+    background-attachment: fixed;
 }
-.container .box:nth-child(2)
+/* .container .box:nth-child(2)
 {
     background: url('images/Bildschirmfoto\ 2020-02-06\ um\ 11.16.45.png');
    _background-color: rgb(112, 112, 112); 
@@ -82,7 +88,7 @@ h2 span {
 .container .box:nth-child(5)
 {
     background-color: rgb(56, 56, 56);
-}
+} */
 .wrapper {
     width:100vw;
     min-height: 100%;
@@ -91,6 +97,7 @@ h2 span {
     display: flex;
 }
 main {
+   
    
 }
 /* menu ---------------------------------------------------- */
@@ -108,11 +115,11 @@ nav{
     width: 40px;
     float: left;
     margin: 10px 0 0 40px;
-    z-index: 5;
+  
 }
 #logo img{
-    width: 100%;
-    z-index: 5;
+    width: 100% ;
+ 
 }
 .menu li a{
     color: white;
@@ -150,6 +157,14 @@ ul {
         align-items: stretch;
         display: flex; */
     }
+     /* Sections About ------------------------------------------- */
+#about img {
+    width: 200px;    
+}
+#about p {
+    _width:700px;
+   _margin: 0 auto 0 auto;
+}
     /* Footer ------------------------------------------ */
 footer {
     width:100vw;
