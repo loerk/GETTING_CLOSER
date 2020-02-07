@@ -5,10 +5,10 @@ html, body {
     font-family: sans-serif;
     font-weight: lighter;
 }
-h3 { font-weight: 500;font-size: 30px;}
+h3 { font-weight: 500;font-size: 30px; scroll-padding-top: 8%; margin-bottom: 10px;}
 h4 {font-weight: 300;font-size: 15px;}
 hr {width:30px; height: 3px; Background:black; border:0; margin:0 auto 40px auto; }
-p {width:700px; margin: 0 auto 0 auto;}
+p {width: 60vw; margin: 0 auto 0 auto;}
 
 /* Image container --------------------------------------- */
 .img-container {
@@ -157,14 +157,78 @@ ul {
         align-items: stretch;
         display: flex; */
     }
-     /* Sections About ------------------------------------------- */
-#about img {
+     /* Section About ------------------------------------------- */
+
+ #about {
+
+ }    
+ #about img {
     width: 200px;    
 }
-#about p {
+/* #about p {
     _width:700px;
    _margin: 0 auto 0 auto;
+} */
+#about img:hover {
+    transform: scale(1,1);
+    -webkit-transform: scale(1,1);
+    -moz-transform: scale(1,1);
+    -o-transform: scale(1,1);
 }
+
+     /* Section Offer ------------------------------------------- */
+#offer_pictures {
+    display: flex;
+    flex-direction: row;
+    padding: 60px;
+    justify-content: space-evenly;   
+}
+#offer_pictures img:hover {
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 2s;
+
+}
+
+
+/* Section Contact ------------------------------------------- */
+form input,textarea {
+    font-family:sans-serif;
+    font size: 15px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+form input {
+    width: 40vw;
+    height: 8vh;
+}
+form textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    width: 40vw;
+    height: 40vh;
+    resize: none;
+    padding-top: 10px;
+
+}
+.input_text {
+    padding-left: 10px;
+}
+.button {
+    background-color: grey;
+}
+/* .form button {
+    width:10%;
+    background-color: rgb(201, 201, 201);
+    border-radius: 3px;
+}
+
+.form button:hover{
+    background-color: rgb(155, 155, 155);
+
+} */
     /* Footer ------------------------------------------ */
 footer {
     width:100vw;
