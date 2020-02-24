@@ -2,10 +2,13 @@
 <html>
     <head>
         <meta charset='UTF-8'/>
-        <meta name= "viewport" content="width=device-width, initial-scale=1">
+        <meta name= "viewport" content="width=device-width, initial-scale=1">  
+        <!--- sizefitting -->
+
         <title>Lørk</title>
-        <link rel='stylesheet' href='style.css'/>
-        <link rel='stylesheet' href='style.css'/>
+
+        <link rel='stylesheet' type= text/css href='css/fontawesome.min.css'/>
+         <link rel='stylesheet' type= text/css href='css/style.css'/>
         
     </head>
     <body>
@@ -14,7 +17,7 @@
 
             <!-- Header  ---------------------------------------->
             <header>
-               <div id="logo">
+                <div id="logo">
                     <a href="#">
                         <img src="images/Logo.png">
                     </a>
@@ -23,18 +26,21 @@
                 <nav>
                     <ul class='menu'>
 
-                        <li class='item'><a href= 'index.html'>ABOUT</a></li>
-                        <li class='item'><a href= 'about.html'>PHILOSOPHY</a></li>
-                        <li class='item'><a href= 'about.html'>OFFER</a></li>
-                        <li class='item'><a href= 'about.html'>CONTACT</a></li>
+                        <a href= 'index.html'><li class='item'>ABOUT</li></a>
+                        <a href= 'index.html'><li class='item'>PHILOSOPHY</li></a>
+                        <a href= 'index.html'><li class='item'>OFFER</li></a>
+                        <a href= 'index.html'><li class='item'>CONTACT</li></a>
 
                     </ul>
                 </nav>
+                
             </header>
 
             <!-- Container ------------------------------------->
                 <div class='container'>
-                    <div class= 'box'><h2><span>WELCOME TO</span></h2></a></div>
+                    <div class= 'box'>
+                        <h2><span>WELCOME TO</span></h2></a>
+                    </div>                       
 
                 </div>
            
@@ -66,7 +72,7 @@
                      <img src= 'https://placehold.it/180x250'></a></li>
 
                     </div>
-                </section>
+                </section>                
 
                 <!--Contact ---------------------------------------->
                 <section id='contact'>
@@ -86,5 +92,9 @@
             <footer>
                 <p>2020.YES!</p>
             </footer>
+
+            <!-- js dateien  -->
+            <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+            <script src="js/mobile-menu.js"></script>
     </body>
 </html>
