@@ -30,12 +30,20 @@ hr {
 p {
     width: 60vw;
     margin: 0 auto 0 auto;
+    text-align: justify;
 }
 
 li {
     list-style-type: none;
 }
-.fa-bars {display: none;} 
+
+.fa-bars {
+    display: none;
+}
+
+body.nontouch nav a:hover {
+    background: yellow;
+}
 
 /* Image container --------------------------------------- */
 
@@ -60,8 +68,9 @@ li {
     text-align: center;
     line-height: 100vh;
     flex-grow: 1;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
+    background-color: white;
     transition: 2s;
 }
 
@@ -115,20 +124,13 @@ h2 span {
 
 /* menu ---------------------------------------------------- */
 
-#logo {
-    width: 60px;
+header img {
     float: left;
-    margin: 8px 0px 0px 20px;
-    z-index: 1;
+    border-radius: 20px;
     display: flex;
     flex-shrink: 0;
-}
-
-#logo img {
-    width: 200%;
-    border-radius: 20px;
-    border-width: 10px;
-    border: solid black;
+    width: 150px;
+    margin: 20px 20px;
 }
 
 header {
@@ -138,7 +140,8 @@ header {
     display: flex;
     justify-content: space-between;
     background-color: black;
-    z-index: 1;
+    z-index: 0;
+    flex-shrink: 0;
 }
 
 header nav {
@@ -168,8 +171,7 @@ header nav {
 }
 
 .menu a:hover {
-    color: rgb(128, 128, 128);
-    padding-top: 0px;
+    padding-top: 10px;
 }
 
 .item {
@@ -179,11 +181,6 @@ header nav {
     border: 1px solid white;
     border-radius: 10px;
     flex-shrink: 1;
-}
-
-.item:hover {
-    color: rgb(128, 128, 128);
-    border: 1px solid rgb(128, 128, 128);
 }
 
 /* Sections ------------------------------------------- */
@@ -200,27 +197,28 @@ section {
 
 /* Section About ------------------------------------------- */
 
-#about {}
-
 #about img {
     width: 200px;
 }
-
 
 /* Section Offer ------------------------------------------- */
 
 #offer {
     height: 200vh;
 }
+
 #work {
-    width:900px;
+    width: 900px;
     margin: 0 auto 0 auto;
 }
+
 #work img {
     width: 100%;
     margin: 0 auto 0 auto;
-    border-radius: 20px;
+
+    
 }
+
 #work img:hover {
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
     transform: scale(1.1);
@@ -233,55 +231,23 @@ section {
 #work ul {
     padding: 0;
 }
+
 #work ul li {
-    display:flex;
+    display: flex;
     width: 40%;
     float: left;
     margin-bottom: 5%;
     margin-top: 5%;
     margin-right: 5%;
-    margin-left:5%;
-
-
+    margin-left: 5%;
 }
-/* #work {
-    width: 900px;
-}
- 
-#work li{
-    padding: 0;
-    width:33,3%;
-    float:center;
-}
-
-/* ul.work {
-    margin-block-start: 4em;
-    margin-block-end: 2em;
-}
-
-.work {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.work img {
-    width: 20%;
-    display: flex wrap;
-    padding: 0;
-    margin: 0;
-    justify-content: space-around;
-    list-style: none;
-}
-
-}
-*/
 
 /* Section Contact ------------------------------------------- */
 
 #contact {
     height: 120vh;
 }
+
 form input, textarea {
     font-family: sans-serif;
     font-size: 15px;
@@ -290,8 +256,9 @@ form input, textarea {
 }
 
 form {
-    width:100%;
+    width: 100%;
 }
+
 form input {
     width: 40vw;
     height: 8vh;
@@ -314,17 +281,6 @@ form textarea {
     background-color: grey;
 }
 
-/* .form button {
-    width:10%;
-    background-color: rgb(201, 201, 201);
-    border-radius: 3px;
-}
-
-.form button:hover{
-    background-color: rgb(155, 155, 155);
-
-} */
-
 /* Footer ------------------------------------------ */
 
 footer {
@@ -332,6 +288,8 @@ footer {
     background-color: black;
     color: white;
     padding: 20px 0px;
+}
+p {
     text-align: center;
 }
 
@@ -344,44 +302,41 @@ footer {
 /* tablets */
 
 @media screen and (max-width: 1024px) {
-
-    header {
-        height: 12vh;
+    p {text-align: justify;}
+    header img {
+        width: 100px;
     }
-    #logo {
-        width: 40px;
-        min-height: 5vw;
+    header {
+        height: inherit;
     }
     ul.menu {
-        margin-top: 0;
+        margin-top: -15px;
     }
     .item {
-        font-size: 12px;
+        font-size: 15px;
     }
     h2 {
-        font-size: 20px;
-        width: 1024px;
-        line-height: 160vh;
+        font-size: 40px;
+        line-height: 150vh;
     }
     h3 {
-        padding-top: 12%;
+        padding-top: 15%;
     }
     #work {
-        width:auto;
+        width: auto;
     }
     #work ul li {
-        width:100%;
+        width: 100%;
         float: none;
-        margin-left:0;
+        margin-left: 0;
     }
     #work ul li:last-child {
         padding-bottom: 20%;
     }
-    #work img{
-        width:45%;
-        height:auto;
+    #work img {
+        width: 45%;
+        height: auto;
     }
-
     /*#offer.work img  {
         width: auto;
     }
@@ -397,27 +352,60 @@ footer {
 /* mobiles */
 
 @media screen and (max-width: 480px) {
+    header img {
+        width: 80px;
+    }
+    .fa-bars {
+        color: white;
+        font-size: 40px;
+        display: inline-block;
+        width: 100%;
+        margin: 24px 0 0 211px;
+    }
+    .fa-bars:hover {
+        opacity: 0.5;
+    }
     h3 {
         padding-top: 15%;
     }
+    .item {
+        font-size: 15px;
+    }
     header {
-        height:10vh;
+        height: 15vh;
+        background-color: black;
+    }
+    h2 {
+        font-size: 20px;
+        line-height: 60vh;
+        padding: 5px;
     }
     header nav {
         float: none;
         margin: 0;
     }
-     #work img {
-        width:50%;
+    header nav ul {
+        height: 0;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        width: 100%;
     }
-    .fa-bars {
-        font-size: 17px;
-        display:inline-block;
-        width:100%;
-        cursor: pointer;
-        text-align: right;
-        float: right;
-        margin: -25px 30px 0 0;
+    header nav ul.open {
+        height: auto;
+    }
+    header nav ul li {
+        width: 100%;
+        padding: 5px 0;
+        margin: 0;
+        font-size: 11px;
+        border-top: 1px solid #dddddd;
+    }
+    header nav ul li:hover {
+        background-color: #eeeeee;
+    }
+    #work img {
+        width: 50%;
     }
     /*offer_pictures {
         width: auto;
